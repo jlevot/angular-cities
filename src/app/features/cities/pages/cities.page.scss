@@ -1,0 +1,25 @@
+$medium-min-breakpoint: 768px;
+$small-max-breakpoint: $medium-min-breakpoint - 1px;
+
+:host {
+  .cards-container {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    width: auto;
+
+    > * {
+      flex: 1 1 18%;
+      //height: auto;
+      //margin: 4px;
+      //padding: 20px 0;
+      //width: auto;
+    }
+
+    @media screen and (max-width: $small-max-breakpoint) {
+      > * {
+        flex: 1 1 100%
+      }
+    }
+  }
+}

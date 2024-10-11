@@ -1,0 +1,13 @@
+<div class="flex align-items-center gap-2">
+  <mat-slider min="0" max="50000000" step="1000000">
+    <input matSliderThumb [formControl]="residentControl">
+  </mat-slider>
+
+  <span class="font-semibold">{{ residentControl.value | number:'1.0-1' }}</span>
+</div>
+
+<div class="cards-container">
+  @for (city of citiesStore.citiesFiltered(); track $index) {
+    <app-city-card [city]="city" class="p-2"></app-city-card>
+  }
+</div>
